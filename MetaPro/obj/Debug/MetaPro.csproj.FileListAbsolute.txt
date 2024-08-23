@@ -1,0 +1,39 @@
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\bin\Debug\MetaPro.exe.config
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\bin\Debug\MetaPro.exe
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\bin\Debug\MetaPro.pdb
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\bin\Debug\EntityFramework.dll
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\bin\Debug\EntityFramework.xml
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.AssemblyReference.cache
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.SuggestedBindingRedirects.cache
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.Inicio.resources
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.Properties.Resources.resources
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.GenerateResource.cache
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.CoreCompileInputs.cache
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.CopyComplete
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.exe
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.pdb
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.Log_in.resources
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.Registro.resources
+C:\Users\ALVARO\Desktop\MetaPro\MetaPro\obj\Debug\MetaPro.FrmObjetivos.resources
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\bin\Debug\MetaPro.exe.config
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\bin\Debug\MetaPro.exe
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\bin\Debug\MetaPro.pdb
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\bin\Debug\EntityFramework.dll
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\bin\Debug\EntityFramework.xml
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.AssemblyReference.cache
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.SuggestedBindingRedirects.cache
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.FrmObjetivos.resources
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.Inicio.resources
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.Log_in.resources
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.Properties.Resources.resources
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.Registro.resources
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.GenerateResource.cache
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.CoreCompileInputs.cache
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.csproj.CopyComplete
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.exe
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.pdb
+C:\Users\ALVARO\Desktop\Proyecto Unidad 3\MetaPro\MetaPro\obj\Debug\MetaPro.FrmPerfilAmigocs.resources

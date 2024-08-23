@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="teamdinamita" Class="DataClassesResumenDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=teamdinamita;Integrated Security=True" SettingsObjectName="MetaPro.Properties.Settings" SettingsPropertyName="teamdinamitaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SP_Agregar_Amigo" Method="SP_Agregar_Amigo">
+    <Parameter Name="buscar" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="SP_Agregar_AmigoResult">
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nickname" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Añadir_Amigo" Method="SP_Añadir_Amigo">
+    <Parameter Name="buscar" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="SP_Añadir_AmigoResult">
+      <Column Name="Nickname" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_LoginUsuario" Method="SP_LoginUsuario">
+    <Parameter Name="pusuario" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ppassword" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="SP_LoginUsuarioResult">
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nickname" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_VerMiProgreso" Method="SP_VerMiProgreso">
+    <Parameter Name="ObjetivoID" Parameter="objetivoID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_VerMiProgresoResult">
+      <Column Name="Avance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaProgreso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_VerMisObjetivos" Method="SP_VerMisObjetivos">
+    <Parameter Name="UsuarioID" Parameter="usuarioID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_VerMisObjetivosResult">
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Tiempo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaC" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Avance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dificultad" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IdObjetivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_VerListaAmigos" Method="SP_VerListaAmigos">
+    <Parameter Name="UsuarioID" Parameter="usuarioID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_VerListaAmigosResult">
+      <Column Name="IdAmigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nickname" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Conexion" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

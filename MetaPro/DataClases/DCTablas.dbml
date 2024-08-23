@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="teamdinamita" Class="DCTablasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=teamdinamita;Integrated Security=True" SettingsObjectName="MetaPro.Properties.Settings" SettingsPropertyName="teamdinamitaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Amigo" Member="Amigo">
+    <Type Name="Amigo">
+      <Column Name="IdAmigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdAmigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_Amigo" Member="Usuario" ThisKey="IdAmigoUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Amigo1" Member="Usuario1" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuario" Member="Usuario">
+    <Type Name="Usuario">
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nickname" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IdCriaturita" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdEstado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Usuario_Amigo" Member="Amigo" ThisKey="IdUsuario" OtherKey="IdAmigoUsuario" Type="Amigo" />
+      <Association Name="Usuario_Amigo1" Member="Amigo1" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Amigo" />
+      <Association Name="Usuario_Objetivo" Member="Objetivo" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Objetivo" />
+      <Association Name="Usuario_Comentario" Member="Comentario" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Comentario" />
+      <Association Name="Criaturita_Usuario" Member="Criaturita" ThisKey="IdCriaturita" OtherKey="IdCriaturita" Type="Criaturita" IsForeignKey="true" />
+      <Association Name="Estado_Usuario" Member="Estado" ThisKey="IdEstado" OtherKey="IdEstado" Type="Estado" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categoria" Member="Categoria">
+    <Type Name="Categoria">
+      <Column Name="IdCategoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Dificultad" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Categoria_Objetivo" Member="Objetivo" ThisKey="IdCategoria" OtherKey="IdCategoria" Type="Objetivo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Criaturita" Member="Criaturita">
+    <Type Name="Criaturita">
+      <Column Name="IdCriaturita" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Association Name="Criaturita_Usuario" Member="Usuario" ThisKey="IdCriaturita" OtherKey="IdCriaturita" Type="Usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estado" Member="Estado">
+    <Type Name="Estado">
+      <Column Name="IdEstado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Conexion" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="Estado_Usuario" Member="Usuario" ThisKey="IdEstado" OtherKey="IdEstado" Type="Usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Objetivo" Member="Objetivo">
+    <Type Name="Objetivo">
+      <Column Name="IdObjetivo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Tiempo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaC" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Avance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdCategoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Objetivo_Progreso" Member="Progreso" ThisKey="IdObjetivo" OtherKey="IdObjetivo" Type="Progreso" />
+      <Association Name="Objetivo_Comentario" Member="Comentario" ThisKey="IdObjetivo" OtherKey="IdObjetivo" Type="Comentario" />
+      <Association Name="Categoria_Objetivo" Member="Categoria" ThisKey="IdCategoria" OtherKey="IdCategoria" Type="Categoria" IsForeignKey="true" />
+      <Association Name="Usuario_Objetivo" Member="Usuario" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Progreso" Member="Progreso">
+    <Type Name="Progreso">
+      <Column Name="IdProgreso" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdObjetivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Avance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaProgreso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Objetivo_Progreso" Member="Objetivo" ThisKey="IdObjetivo" OtherKey="IdObjetivo" Type="Objetivo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comentario" Member="Comentario">
+    <Type Name="Comentario">
+      <Column Name="IdComentario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Contenido" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DiaPubli" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdObjetivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Objetivo_Comentario" Member="Objetivo" ThisKey="IdObjetivo" OtherKey="IdObjetivo" Type="Objetivo" IsForeignKey="true" />
+      <Association Name="Usuario_Comentario" Member="Usuario" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
